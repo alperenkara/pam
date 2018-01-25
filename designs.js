@@ -35,7 +35,7 @@ function makeGrid() {
   });
   
   var colorWell;
-  var defaultColor = "#0000ff";
+  var defaultColor = "#000000";
 
   window.addEventListener("load",startup,false);
 

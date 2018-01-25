@@ -20,8 +20,9 @@
     </form>
 
     <label for="colorWell"><h2>Pick A Color: </h2></label>
-    <input type="color" value="ff0000" id="colorWell">
-
+    <!--Solve the iOS type="color " problem -->
+    <!--<input type="color" value="ff0000" id="colorWell"> -->
+    <input type=color pattern="#[a-f0-9]{6}" title="hexadecimal color" placeholder="#000000" id="colorWell">
     <h2>Design Canvas</h2>
     <table id="pixel_canvas"></table>
 
