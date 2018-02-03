@@ -1,0 +1,79 @@
+.menu {
+    
+    border: 2px solid black ;
+    border-radius: 10px;
+    height: 40%;
+    width: 30%;
+}
+.menu > input {
+    height: 1em;
+    width: 5em;
+    
+    margin-bottom: 1em;
+}
+
+.app { 
+    float: right;
+    position: relative;
+
+    left:5px;
+    bottom:415px;
+    
+    overflow: auto;
+    height: 70%;
+    width: 70%;
+    border: 2px solid red ;
+    border-radius: 10px;
+  /*  justify-content: start; */
+    
+    
+}
+
+body {
+    
+    text-align: center;
+}
+
+h1 {
+    
+    font-family: Monoton, 'Times New Roman', Times, serif ;
+    font-size: 60px;
+    margin: 0.5em;
+}
+
+h2 {
+    margin: 1em 1 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 1em;
+}
+
+table,
+tr,
+td {
+    border-radius: 20px;
+    border: 0.5px solid black;
+}
+
+table {
+    border: none ;
+   /* border-collapse: */
+    margin: 0 auto;
+}
+
+tr {
+   
+    height: 30px;
+}
+
+td {
+    width: 30px;
+}
+
+input[type=number] {
+    width: 3em;
+}
+input[type=submit] {
+    margin-top: 2em;
+}

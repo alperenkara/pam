@@ -1,6 +1,7 @@
 function makeGrid() {
 
     //Get nb of rows and cols input
+    //we use # because of the id="input_height"
     var rows = $("#input_height").val();
     var cols = $("#input_width").val();
   
@@ -22,27 +23,27 @@ function makeGrid() {
     //Listen for cell clicks
     table.on("click", "td", function() {
       //Get color from color picker
-      var color = $("input[type='color']").val();
+      var color = $('#colorPicker').val();
       //Apply color to cell
       $(this).attr("bgcolor", color);
     });
+      // color = $("input[class='jscolor']").val();
+
+  ///////////////////////////////////
+      //click and drag to draw  
+  table.on('mousemove', 'td', function(evt) {
+    if (evt.buttons == 1) {
+      color = $('#colorPicker').val();
+      $(this).attr("bgcolor", color);
+    }
+  });
   }
-  
+  //////////////////////////////////
+
   // Listen for button clicks to trigger makeGrid()
   $("input[type='submit']").click(function(e) {
     e.preventDefault(); //Required to avoid submit and page reload
     makeGrid();
   });
   
-  var colorWell;
-  var defaultColor = "#000000";
-
-  window.addEventListener("load",startup,false);
-
-  function startup(){
-    colorWell = document.querySelector("#colorWell");
-    colorWell.value = defaultColor;
-    colorWell.addEventListener("input", updateFirst, false);
-    colorWell.addEventListener("change", updateAll, false);
-    colorWell.select();
-  }
+ 

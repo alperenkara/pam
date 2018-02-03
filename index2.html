@@ -5,60 +5,46 @@
     
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel='stylesheet' href='spectrum.css' />
 
 </head>
 <body>
-    <div class="menu">
        <!--Load jQuery using Google CDN-->
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
        
 
-    <h1>Alperen</h1>
+    <h1>INDEX 2</h1>
 
     <h2>Choose Grid Size</h2>
-
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1"  value="1"><br /><br />
+        <input type="number" id="input_height" name="height" min="1" value="1">
         Grid Width:
-        <input type="number" id="input_width" name="width" min="1"  value="1"><br />
+        <input type="number" id="input_width" name="width" min="1" value="1">
         <input type="submit" name="Send">
     </form>
 
-   
+    <label for="colorpicker"><h2>Pick A Color: </h2></label>
     
-    
+    <script src="jscolor.js"></script>
 
-    <label for="colorPicker"><h2>Pick A Color: </h2></label>
+
 <input
-
-    size="5px"
-    id="colorPicker"
-    class="jscolor"
+    id = "inputButton"
+    class="jscolor{}"
     style="border:2px solid black">
-    
 </input>
-
-
-
-</div>
-<!--end of menu div -->
-
     <!--Solve the iOS type="color " problem -->
     <!-- <input  class="jscolor" value="ff0000" id="colorpicker"> -->
     <!--input type=color pattern="#[a-f0-9]{6}" title="hexadecimal color" placeholder="#000000" id="colorWell">-->
 
-    <div class="app">
-            <h2>Design Canvas</h2>
-            <table id="pixel_canvas"></table>
-            </div>
-    </div>
 
+    
+    <h2>Design Canvas</h2>
+    <table id="pixel_canvas"></table>
 
-    <script src="jscolor.js"></script>
     <script src="designs.js"></script>
     <script src='spectrum.js'></script>
 </body>
