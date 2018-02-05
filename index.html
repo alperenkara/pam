@@ -3,28 +3,34 @@
 <head>
     <title>Pixel Art Maker!</title>
     
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles2.css">
-    <link rel='stylesheet' href='spectrum.css' />
+    
 
 </head>
 <body>
+        <div class="app">
+                <h2>Design Canvas</h2>
+                <table id="pixel_canvas"></table>
+                </div>
+        </div>
     <div class="menu">
        <!--Load jQuery using Google CDN-->
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+      
        
 
-    <h1>PAM Project</h1>
-
+    <h1>PAM  Project</h1>
+    <h3><a href="https://linkedin.com/in/alperenkara" target="_blank">Alperen KARA</a></h3>
     <h2>Choose Grid Size</h2>
 
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1"  value="1"><br /><br />
+        <input type="number" id="input_height" name="height" min="1"  value="12"><br /><br />
         Grid Width:
-        <input type="number" id="input_width" name="width" min="1"  value="1"><br />
+        <input type="number" id="input_width" name="width" min="1"  value="12"><br />
         <input type="submit" name="Send"><br/><br/>
         <button id="reset">Reset</button>
     </form>
@@ -35,12 +41,11 @@
 
     <label for="colorPicker"><h2>Pick A Color: </h2></label>
 <input
-
-    size="5px"
+    type="colorF"
+    value="FF3300"
     id="colorPicker"
     class="jscolor"
-    style="border:2px solid black">
-    
+    style="border:none">
 </input>
 
 
@@ -52,15 +57,11 @@
     <!-- <input  class="jscolor" value="ff0000" id="colorpicker"> -->
     <!--input type=color pattern="#[a-f0-9]{6}" title="hexadecimal color" placeholder="#000000" id="colorWell">-->
 
-    <div class="app">
-            <h2>Design Canvas</h2>
-            <table id="pixel_canvas"></table>
-            </div>
-    </div>
 
 
-    <script src="jscolor.js"></script>
+
+    
     <script src="designs.js"></script>
-    <script src='spectrum.js'></script>
+    
 </body>
 </html>

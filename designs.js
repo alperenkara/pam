@@ -44,7 +44,7 @@ function makeGrid() {
 /**
  * Right Click Function
  */
-  table.on("dblclick", "td", function() {
+  table.on("click", "td", function() {
     $(this).attr("bgcolor", "");
   });
 
