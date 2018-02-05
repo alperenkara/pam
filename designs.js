@@ -10,7 +10,9 @@ function makeGrid() {
   
     //Reset to empty table --- in case one already created
     table.children().remove();
-  
+
+    
+
     //Create rows
     for (var i = 0; i < rows; i++) {
       table.append("<tr></tr>");
@@ -23,20 +25,35 @@ function makeGrid() {
     //Listen for cell clicks
     table.on("click", "td", function() {
       //Get color from color picker
-      var color = $('#colorPicker').val();
+      var color = $("#colorPicker").val();
       //Apply color to cell
       $(this).attr("bgcolor", color);
     });
       // color = $("input[class='jscolor']").val();
 
-  ///////////////////////////////////
-      //click and drag to draw  
-  table.on('mousemove', 'td', function(evt) {
+/**
+ * Click and drag to draw 
+ */
+       
+  table.on("mousemove", "td", function(evt) {
     if (evt.buttons == 1) {
-      color = $('#colorPicker').val();
+      color = $("#colorPicker").val();
       $(this).attr("bgcolor", color);
     }
   });
+/**
+ * Right Click Function
+ */
+  table.on("dblclick", "td", function() {
+    $(this).attr("bgcolor", "");
+  });
+
+
+  $("#reset").on('click',function(e){
+    e.preventDefault();
+    $('td').attr("bgcolor","");
+});
+
   }
   //////////////////////////////////
 
