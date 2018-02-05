@@ -8,7 +8,7 @@ function makeGrid() {
     //Get table
     var table = $("#pixel_canvas");
   
-    //Reset to empty table --- in case one already created
+    //Reset to empty table
     table.children().remove();
 
     
@@ -22,9 +22,9 @@ function makeGrid() {
       }
     }
   
-    //Listen for cell clicks
+    //for clicks
     table.on("click", "td", function() {
-      //Get color from color picker
+      //Get color from pallet
       var color = $("#colorPicker").val();
       //Apply color to cell
       $(this).attr("bgcolor", color);
@@ -42,7 +42,7 @@ function makeGrid() {
     }
   });
 /**
- * Right Click Function
+ * Remove Click Function
  */
   table.on("click", "td", function() {
     $(this).attr("bgcolor", "");
@@ -57,7 +57,7 @@ function makeGrid() {
   }
   //////////////////////////////////
 
-  // Listen for button clicks to trigger makeGrid()
+  //trigger makeGrid()
   $("input[type='submit']").click(function(e) {
     e.preventDefault(); //Required to avoid submit and page reload
     makeGrid();
