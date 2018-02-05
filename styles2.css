@@ -31,7 +31,6 @@
 html {
     background:#018DED url(https://picsum.photos/1500/750);
     background-size:auto;
-    background-repeat: no-repeat;
   }
 a {
     text-decoration: none;
